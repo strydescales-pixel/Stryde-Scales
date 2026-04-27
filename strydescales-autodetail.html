@@ -204,14 +204,29 @@
       position: absolute;
       inset: 0;
       background:
-        radial-gradient(ellipse 300px 200px at 20% 60%, rgba(59,130,246,0.12) 0%, transparent 70%),
-        radial-gradient(ellipse 200px 150px at 70% 30%, rgba(96,165,250,0.10) 0%, transparent 65%),
-        radial-gradient(ellipse 150px 100px at 50% 70%, rgba(37,99,235,0.08) 0%, transparent 60%),
-        radial-gradient(ellipse 100px 80px at 85% 65%, rgba(147,197,253,0.07) 0%, transparent 55%),
-        radial-gradient(ellipse 80px 60px at 35% 85%, rgba(59,130,246,0.06) 0%, transparent 50%),
-        radial-gradient(ellipse 600px 400px at 50% 50%, rgba(15,30,80,0.5) 0%, transparent 80%),
-        #0A0A0A;
-      opacity: 1;
+        /* Readable dark overlay */
+        linear-gradient(to bottom, rgba(4,8,18,0.80) 0%, rgba(4,8,18,0.68) 50%, rgba(4,8,18,0.85) 100%),
+        /* Bright bokeh orbs — sharp white highlights */
+        radial-gradient(circle 44px at 22% 52%, rgba(255,255,255,0.22) 0%, rgba(255,255,255,0.07) 40%, transparent 65%),
+        radial-gradient(circle 32px at 37% 47%, rgba(220,235,255,0.18) 0%, transparent 58%),
+        radial-gradient(circle 54px at 51% 59%, rgba(255,255,255,0.20) 0%, rgba(255,255,255,0.06) 38%, transparent 64%),
+        radial-gradient(circle 27px at 63% 43%, rgba(200,222,255,0.16) 0%, transparent 54%),
+        radial-gradient(circle 40px at 73% 56%, rgba(255,255,255,0.19) 0%, rgba(255,255,255,0.06) 36%, transparent 62%),
+        radial-gradient(circle 22px at 84% 39%, rgba(220,235,255,0.15) 0%, transparent 52%),
+        radial-gradient(circle 50px at 90% 58%, rgba(255,255,255,0.17) 0%, rgba(255,255,255,0.05) 36%, transparent 63%),
+        radial-gradient(circle 25px at 13% 64%, rgba(200,218,255,0.13) 0%, transparent 53%),
+        radial-gradient(circle 36px at 76% 30%, rgba(255,255,255,0.15) 0%, transparent 57%),
+        radial-gradient(circle 19px at 46% 74%, rgba(180,210,255,0.11) 0%, transparent 50%),
+        radial-gradient(circle 30px at 58% 33%, rgba(210,228,255,0.13) 0%, transparent 55%),
+        radial-gradient(circle 24px at 8%  45%, rgba(200,220,255,0.12) 0%, transparent 52%),
+        /* Diffuse medium blue glow blobs */
+        radial-gradient(circle 95px  at 28% 54%, rgba(80,145,215,0.11) 0%, transparent 70%),
+        radial-gradient(circle 110px at 62% 46%, rgba(70,130,205,0.09) 0%, transparent 72%),
+        radial-gradient(circle 80px  at 82% 62%, rgba(85,150,218,0.10) 0%, transparent 68%),
+        radial-gradient(circle 100px at 12% 38%, rgba(65,125,200,0.08) 0%, transparent 70%),
+        radial-gradient(circle 75px  at 50% 75%, rgba(75,138,210,0.09) 0%, transparent 66%),
+        /* Atmospheric haze — upper sky lighter, lower darker */
+        linear-gradient(185deg, #1e3d60 0%, #112540 22%, #0a1a30 48%, #050d1c 100%);
       pointer-events: none;
     }
 
@@ -844,51 +859,58 @@
       <div class="logo-mark">
         <svg viewBox="0 0 200 220" xmlns="http://www.w3.org/2000/svg" width="52" height="57" aria-hidden="true">
           <defs>
-            <filter id="navShadow" x="-20%" y="-20%" width="140%" height="140%">
-              <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="rgba(0,0,0,0.25)"/>
+            <filter id="navShadow" x="-20%" y="-20%" width="150%" height="150%">
+              <feDropShadow dx="0" dy="4" stdDeviation="7" flood-color="rgba(0,0,0,0.22)"/>
             </filter>
-            <linearGradient id="navSGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#1a2d6e"/>
-              <stop offset="50%" stop-color="#1e4db7"/>
+            <linearGradient id="navSGrad" x1="10%" y1="0%" x2="90%" y2="100%">
+              <stop offset="0%" stop-color="#0f1d4a"/>
+              <stop offset="45%" stop-color="#1a3a8c"/>
               <stop offset="100%" stop-color="#2563eb"/>
             </linearGradient>
             <linearGradient id="navArrowGrad" x1="0%" y1="100%" x2="100%" y2="0%">
-              <stop offset="0%" stop-color="#3b82f6"/>
-              <stop offset="100%" stop-color="#60a5fa"/>
+              <stop offset="0%" stop-color="#1e4db7"/>
+              <stop offset="100%" stop-color="#7cc3f8"/>
             </linearGradient>
           </defs>
-          <!-- White circle background -->
+
+          <!-- White circle -->
           <circle cx="100" cy="100" r="96" fill="white" filter="url(#navShadow)"/>
-          <!-- Bold S letterform — multi-layer for depth effect -->
-          <!-- Back layer (darkest) -->
-          <text x="54" y="122" font-family="Arial Black, sans-serif" font-weight="900" font-size="96" fill="#0f1d4a" letter-spacing="-4">S</text>
-          <!-- Mid layer -->
-          <text x="56" y="120" font-family="Arial Black, sans-serif" font-weight="900" font-size="96" fill="#1a3a7c" letter-spacing="-4">S</text>
-          <!-- Front layer -->
-          <text x="58" y="118" font-family="Arial Black, sans-serif" font-weight="900" font-size="96" fill="url(#navSGrad)" letter-spacing="-4">S</text>
-          <!-- Upward diagonal arrow cutting through S -->
-          <!-- Arrow shaft -->
-          <line x1="50" y1="130" x2="130" y2="42" stroke="url(#navArrowGrad)" stroke-width="10" stroke-linecap="round"/>
-          <!-- Arrow zigzag/lightning bolt effect mid-shaft -->
-          <polyline points="68,112 82,95 72,85 88,68" fill="none" stroke="url(#navArrowGrad)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
-          <!-- Arrowhead -->
-          <polygon points="130,42 112,50 120,62" fill="#3b82f6"/>
-          <polygon points="130,42 138,60 120,62" fill="#60a5fa"/>
-          <!-- Balance/scales icon — top right of S -->
-          <!-- Triangle fulcrum -->
-          <polygon points="148,52 158,72 138,72" fill="none" stroke="#1a2d6e" stroke-width="2.5"/>
-          <!-- Left pan chain -->
-          <line x1="140" y1="72" x2="136" y2="82" stroke="#1a2d6e" stroke-width="2"/>
-          <!-- Right pan chain -->
-          <line x1="156" y1="72" x2="160" y2="82" stroke="#1a2d6e" stroke-width="2"/>
-          <!-- Left pan -->
-          <path d="M132,82 Q136,88 140,82" fill="none" stroke="#3b82f6" stroke-width="2.5"/>
-          <!-- Right pan -->
-          <path d="M156,82 Q160,88 164,82" fill="none" stroke="#3b82f6" stroke-width="2.5"/>
-          <!-- Water drop in left pan -->
-          <ellipse cx="136" cy="85" rx="3" ry="4" fill="#3b82f6" opacity="0.6"/>
-          <!-- STRYDE SCALES wordmark -->
-          <text x="100" y="175" font-family="Arial Black, sans-serif" font-weight="900" font-size="17" fill="#0f1d4a" text-anchor="middle" letter-spacing="1">STRYDE SCALES</text>
+
+          <!-- S letterform: 3 stacked layers for 3D depth -->
+          <text x="30" y="128" font-family="'Plus Jakarta Sans','Arial Black',sans-serif" font-weight="800" font-size="105" fill="#07112e">S</text>
+          <text x="32" y="126" font-family="'Plus Jakarta Sans','Arial Black',sans-serif" font-weight="800" font-size="105" fill="#12296e">S</text>
+          <text x="34" y="124" font-family="'Plus Jakarta Sans','Arial Black',sans-serif" font-weight="800" font-size="105" fill="url(#navSGrad)">S</text>
+
+          <!-- Arrow: single zigzag polyline from lower-left to upper-right, with arrowhead -->
+          <polyline points="42,148 58,126 46,112 66,88 54,74 78,50 128,36"
+                    fill="none" stroke="url(#navArrowGrad)" stroke-width="8"
+                    stroke-linecap="round" stroke-linejoin="round"/>
+          <!-- Arrowhead triangle -->
+          <polygon points="128,36 112,46 118,58" fill="#60a5fa"/>
+          <polygon points="128,36 134,52 118,58" fill="#93c5fd"/>
+
+          <!-- Balance/scales icon — upper right, properly sized -->
+          <!-- Main triangle outline -->
+          <polygon points="162,40 184,80 140,80" fill="none" stroke="#0f1d4a" stroke-width="3" stroke-linejoin="round"/>
+          <!-- Blue fill in lower portion of triangle -->
+          <polygon points="151,64 184,80 140,80" fill="#2563eb" opacity="0.45"/>
+          <!-- Left short chain -->
+          <line x1="140" y1="80" x2="134" y2="95" stroke="#1a2d6e" stroke-width="2.5"/>
+          <!-- Right short chain -->
+          <line x1="184" y1="80" x2="183" y2="95" stroke="#1a2d6e" stroke-width="2.5"/>
+          <!-- Left pan — solid filled ellipse -->
+          <ellipse cx="130" cy="104" rx="10" ry="11" fill="#1a3a8c" opacity="0.9"/>
+          <!-- Right pan — solid filled ellipse -->
+          <ellipse cx="187" cy="104" rx="10" ry="11" fill="#1a3a8c" opacity="0.9"/>
+
+          <!-- Wordmark: clean weight, wider tracking -->
+          <text x="100" y="180"
+                font-family="'Plus Jakarta Sans','Trebuchet MS',sans-serif"
+                font-weight="600"
+                font-size="14"
+                fill="#0f1d4a"
+                text-anchor="middle"
+                letter-spacing="3">STRYDE SCALES</text>
         </svg>
       </div>
       <div class="logo-wordmark">
