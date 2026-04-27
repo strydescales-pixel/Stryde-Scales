@@ -749,6 +749,35 @@
       border-color: rgba(59, 130, 246, 0.7);
     }
 
+    .website-card {
+      grid-column: 1 / -1;
+      margin-top: 8px;
+    }
+
+    .website-card-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr auto;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .website-features {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    .website-cta {
+      white-space: nowrap;
+      padding: 14px 28px;
+      width: auto;
+    }
+
+    @media (max-width: 768px) {
+      .website-card-inner { grid-template-columns: 1fr; }
+      .website-cta { width: 100%; }
+    }
+
     .pricing-footnote {
       text-align: center;
       margin-top: 40px;
@@ -1260,7 +1289,24 @@
         <a href="https://calendly.com/strydescales/30min" target="_blank" rel="noopener" class="pricing-btn outline">Book a Strategy Call →</a>
       </div>
 
-    </div>
+    
+    <div class="pricing-card website-card">
+      <div class="pricing-header website-card-inner">
+        <div>
+          <div class="pricing-icon">&#127760;</div>
+          <h3>Website Design &amp; Build</h3>
+          <p class="pricing-desc">A fast, clean, mobile-first website built to convert detailing leads — not just look good. Built to run traffic to from day one.</p>
+        </div>
+        <ul class="pricing-features website-features">
+          <li>Custom design built for auto detailers</li>
+          <li>Mobile-first &amp; fast-loading</li>
+          <li>Online booking integration</li>
+          <li>SEO foundation built in</li>
+          <li>Ready to run paid traffic to immediately</li>
+        </ul>
+        <a href="https://calendly.com/strydescales/website-building-meeting" target="_blank" rel="noopener" class="pricing-btn solid website-cta">Book a Website Call →</a>
+      </div>
+    </div></div>
 
     <p class="pricing-footnote">Not sure which plan fits your market and budget? Book a free call — we'll tell you honestly which one makes sense.</p>
   </div>
