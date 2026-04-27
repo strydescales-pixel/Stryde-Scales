@@ -203,8 +203,15 @@
     .hero-bg {
       position: absolute;
       inset: 0;
-      background: radial-gradient(ellipse 70% 60% at 50% 40%, #1a3a6e 0%, transparent 70%);
-      opacity: 0.45;
+      background:
+        radial-gradient(ellipse 300px 200px at 20% 60%, rgba(59,130,246,0.12) 0%, transparent 70%),
+        radial-gradient(ellipse 200px 150px at 70% 30%, rgba(96,165,250,0.10) 0%, transparent 65%),
+        radial-gradient(ellipse 150px 100px at 50% 70%, rgba(37,99,235,0.08) 0%, transparent 60%),
+        radial-gradient(ellipse 100px 80px at 85% 65%, rgba(147,197,253,0.07) 0%, transparent 55%),
+        radial-gradient(ellipse 80px 60px at 35% 85%, rgba(59,130,246,0.06) 0%, transparent 50%),
+        radial-gradient(ellipse 600px 400px at 50% 50%, rgba(15,30,80,0.5) 0%, transparent 80%),
+        #0A0A0A;
+      opacity: 1;
       pointer-events: none;
     }
 
@@ -291,7 +298,9 @@
     /* ─── WHAT WE DO ──────────────────────────────────── */
     .work-section {
       padding: 90px 0;
-      background: #0d0d0d;
+      background-image:
+        url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%233B82F6' stroke-width='0.5' opacity='0.06'%3E%3Cline x1='0' y1='60' x2='60' y2='0'/%3E%3Cline x1='-30' y1='60' x2='30' y2='0'/%3E%3Cline x1='30' y1='60' x2='90' y2='0'/%3E%3C/g%3E%3C/svg%3E"),
+        linear-gradient(180deg, #0d1117 0%, #0A0A0A 100%);
     }
 
     .work-section .container {
@@ -355,6 +364,12 @@
       padding: 90px 0;
       position: relative;
       overflow: hidden;
+      background:
+        radial-gradient(ellipse 70% 50% at 15% 50%, rgba(30,77,183,0.13) 0%, transparent 70%),
+        radial-gradient(ellipse 50% 60% at 80% 30%, rgba(59,130,246,0.10) 0%, transparent 65%),
+        radial-gradient(ellipse 40% 40% at 50% 80%, rgba(37,99,235,0.08) 0%, transparent 60%),
+        radial-gradient(ellipse 80% 30% at 60% 10%, rgba(96,165,250,0.06) 0%, transparent 55%),
+        #0d1117;
     }
 
     .results-section .diag-lines-abs {
@@ -430,7 +445,9 @@
     /* ─── PROCESS ─────────────────────────────────────── */
     .process-section {
       padding: 90px 0;
-      background: #0d0d0d;
+      background-image:
+        url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%233B82F6' stroke-width='0.5' opacity='0.06'%3E%3Cline x1='0' y1='60' x2='60' y2='0'/%3E%3Cline x1='-30' y1='60' x2='30' y2='0'/%3E%3Cline x1='30' y1='60' x2='90' y2='0'/%3E%3C/g%3E%3C/svg%3E"),
+        linear-gradient(180deg, #0A0A0A 0%, #0d1117 100%);
     }
 
     .process-section .section-header {
@@ -515,6 +532,9 @@
       padding: 90px 0;
       position: relative;
       overflow: hidden;
+      background-image:
+        url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='15' cy='15' r='1' fill='%233B82F6' fill-opacity='0.07'/%3E%3C/svg%3E"),
+        linear-gradient(180deg, #0A0A0A 0%, #0d1117 100%);
     }
 
     .fit-section .dot-grid-abs {
@@ -621,7 +641,9 @@
     /* ─── ABOUT ───────────────────────────────────────── */
     .about-section {
       padding: 90px 0;
-      background: #0d0d0d;
+      background-image:
+        url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%233B82F6' stroke-width='0.5' opacity='0.06'%3E%3Cline x1='0' y1='60' x2='60' y2='0'/%3E%3Cline x1='-30' y1='60' x2='30' y2='0'/%3E%3Cline x1='30' y1='60' x2='90' y2='0'/%3E%3C/g%3E%3C/svg%3E"),
+        linear-gradient(180deg, #0d1117 0%, #0A0A0A 100%);
     }
 
     .about-inner {
@@ -666,12 +688,16 @@
       padding: 100px 0;
       text-align: center;
       overflow: hidden;
+      background:
+        radial-gradient(ellipse 80% 60% at 50% 50%, rgba(37,99,235,0.18) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 40% at 30% 70%, rgba(59,130,246,0.10) 0%, transparent 60%),
+        #080c14;
     }
 
     .final-cta-bg {
       position: absolute;
       inset: 0;
-      background: radial-gradient(ellipse 60% 70% at 50% 50%, rgba(59, 130, 246, 0.14) 0%, transparent 70%);
+      background: transparent;
       pointer-events: none;
     }
 
@@ -814,23 +840,55 @@
 <nav>
   <div class="nav-inner">
     <a href="#" class="logo" aria-label="Stryde Scales home">
-      <!-- Logo mark: S monogram in blue circle -->
+      <!-- Logo mark: faithful Stryde Scales recreation -->
       <div class="logo-mark">
-        <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <circle cx="21" cy="21" r="21" fill="#fff" filter="drop-shadow(0 2px 6px rgba(0,0,0,0.35))"/>
-          <!-- Gradient defs -->
+        <svg viewBox="0 0 200 220" xmlns="http://www.w3.org/2000/svg" width="52" height="57" aria-hidden="true">
           <defs>
-            <linearGradient id="sGrad" x1="10" y1="8" x2="32" y2="34" gradientUnits="userSpaceOnUse">
-              <stop offset="0%" stop-color="#1e3a8a"/>
-              <stop offset="100%" stop-color="#3B82F6"/>
+            <filter id="navShadow" x="-20%" y="-20%" width="140%" height="140%">
+              <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="rgba(0,0,0,0.25)"/>
+            </filter>
+            <linearGradient id="navSGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#1a2d6e"/>
+              <stop offset="50%" stop-color="#1e4db7"/>
+              <stop offset="100%" stop-color="#2563eb"/>
+            </linearGradient>
+            <linearGradient id="navArrowGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#3b82f6"/>
+              <stop offset="100%" stop-color="#60a5fa"/>
             </linearGradient>
           </defs>
-          <!-- Bold S letterform -->
-          <path d="M27 14.5C27 14.5 24.5 12 20.5 12C16.5 12 13.5 14.5 13.5 17.5C13.5 20 15.5 21.5 19 22.5L22 23.5C25 24.5 28.5 26 28.5 29.5C28.5 33 25 36 20.5 36C16 36 13 33 13 33" stroke="url(#sGrad)" stroke-width="3.2" stroke-linecap="round" fill="none"/>
-          <!-- Upward arrow overlay -->
-          <path d="M17 28L25 14" stroke="#3B82F6" stroke-width="2.2" stroke-linecap="round"/>
-          <path d="M25 14L29 19" stroke="#3B82F6" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M25 14L20 18" stroke="#3B82F6" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+          <!-- White circle background -->
+          <circle cx="100" cy="100" r="96" fill="white" filter="url(#navShadow)"/>
+          <!-- Bold S letterform — multi-layer for depth effect -->
+          <!-- Back layer (darkest) -->
+          <text x="54" y="122" font-family="Arial Black, sans-serif" font-weight="900" font-size="96" fill="#0f1d4a" letter-spacing="-4">S</text>
+          <!-- Mid layer -->
+          <text x="56" y="120" font-family="Arial Black, sans-serif" font-weight="900" font-size="96" fill="#1a3a7c" letter-spacing="-4">S</text>
+          <!-- Front layer -->
+          <text x="58" y="118" font-family="Arial Black, sans-serif" font-weight="900" font-size="96" fill="url(#navSGrad)" letter-spacing="-4">S</text>
+          <!-- Upward diagonal arrow cutting through S -->
+          <!-- Arrow shaft -->
+          <line x1="50" y1="130" x2="130" y2="42" stroke="url(#navArrowGrad)" stroke-width="10" stroke-linecap="round"/>
+          <!-- Arrow zigzag/lightning bolt effect mid-shaft -->
+          <polyline points="68,112 82,95 72,85 88,68" fill="none" stroke="url(#navArrowGrad)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+          <!-- Arrowhead -->
+          <polygon points="130,42 112,50 120,62" fill="#3b82f6"/>
+          <polygon points="130,42 138,60 120,62" fill="#60a5fa"/>
+          <!-- Balance/scales icon — top right of S -->
+          <!-- Triangle fulcrum -->
+          <polygon points="148,52 158,72 138,72" fill="none" stroke="#1a2d6e" stroke-width="2.5"/>
+          <!-- Left pan chain -->
+          <line x1="140" y1="72" x2="136" y2="82" stroke="#1a2d6e" stroke-width="2"/>
+          <!-- Right pan chain -->
+          <line x1="156" y1="72" x2="160" y2="82" stroke="#1a2d6e" stroke-width="2"/>
+          <!-- Left pan -->
+          <path d="M132,82 Q136,88 140,82" fill="none" stroke="#3b82f6" stroke-width="2.5"/>
+          <!-- Right pan -->
+          <path d="M156,82 Q160,88 164,82" fill="none" stroke="#3b82f6" stroke-width="2.5"/>
+          <!-- Water drop in left pan -->
+          <ellipse cx="136" cy="85" rx="3" ry="4" fill="#3b82f6" opacity="0.6"/>
+          <!-- STRYDE SCALES wordmark -->
+          <text x="100" y="175" font-family="Arial Black, sans-serif" font-weight="900" font-size="17" fill="#0f1d4a" text-anchor="middle" letter-spacing="1">STRYDE SCALES</text>
         </svg>
       </div>
       <div class="logo-wordmark">
@@ -864,7 +922,7 @@
       <div class="section-label">The Work</div>
       <h2>Meta Ads Built for Detailers. Managed by Someone Who Actually Watches Your Numbers.</h2>
       <p>We write the copy, build the creatives, and set the targeting — everything built around detailing-specific language. Full details. Paint correction. Ceramic coating. We know the difference, and so do your customers.</p>
-      <p>Kay personally monitors every campaign. Not an account manager. Not a VA. When something's off, it gets caught and fixed fast — not at the next monthly check-in.</p>
+      <p>Our team personally monitors every campaign. Not an account manager. Not a VA. When something's off, it gets caught and fixed fast — not at the next monthly check-in.</p>
       <p>We test constantly. Ads that stop working get replaced. Ads that work get scaled. Your budget doesn't sit idle waiting for a quarterly review.</p>
     </div>
     <div class="work-right">
@@ -874,7 +932,7 @@
       </div>
       <div class="feature-card">
         <h4>Direct Oversight, Every Day</h4>
-        <p>Kay watches your metrics personally. Performance drops get addressed in hours, not weeks.</p>
+        <p>We watch your metrics personally. Performance drops get addressed in hours, not weeks.</p>
       </div>
       <div class="feature-card">
         <h4>Continuous Testing</h4>
@@ -1026,7 +1084,7 @@
       <div class="section-label">Who's Behind This</div>
       <h2>A Small Shop That Runs Lean on Purpose</h2>
       <p>Stryde Scales is a performance marketing agency that works exclusively with auto detailing businesses. We don't take on every client who comes through the door — we take on the ones we can genuinely help, and then we go all in on their results.</p>
-      <p>Kay personally runs and manages every campaign — watching metrics, adjusting spend, testing new creative. Every account gets real attention. There's no team of junior account managers between you and the work.</p>
+      <p>We run and manage every campaign personally — watching metrics, adjusting spend, testing new creative. Every account gets real attention. There's no team of junior account managers between you and the work.</p>
       <div class="scarcity-line">One detailing business per market. First in wins.</div>
     </div>
   </div>
